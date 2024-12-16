@@ -13,56 +13,48 @@
   <link rel="icon" href="assets/tiffies_site_icon.png"/>
   <link rel="stylesheet" href="./style.css">
   <script>
-    // get countdown container and text to hide it when the countdown ends
-    var countdown = document.getElementById("countdown").innerHTML;
-    // Set the date we're counting down to
-    var countDownDate = new Date(Date.UTC(2024, 11, 30, 00, 00, 00, 00)).getTime();
+// Set the date we're counting down to
+var countDownDate = new Date(Date.UTC(2024, 11, 30, 00, 00, 00, 00)).getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-      // Get today's date and time
-      var now = new Date().getTime();
-        
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-        
-      // Time calculations for days, hours, minutes and seconds
-      var daysraw = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hoursraw = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutesraw = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var secondsraw = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      // Format the time values
-      var days = daysraw < 10 ? ("0" + daysraw).slice(-2) : daysraw;
-      var hours = hoursraw < 10 ? ("0" + hoursraw).slice(-2) : hoursraw;
-      var minutes = minutesraw < 10 ? ("0" + minutesraw).slice(-2) : minutesraw;
-      var seconds = secondsraw < 10 ? ("0" + secondsraw).slice(-2) : secondsraw;
-      
-      // Output the result in the respective elements
-      document.getElementById("days").innerHTML =(days+":");
-      document.getElementById("hours").innerHTML =(hours+":");
-      document.getElementById("minutes").innerHTML =(minutes+":");
-      document.getElementById("seconds").innerHTML = seconds;
-        
-      // If the count down is over, write some text 
-      if (distance < 0) {
-        clearInterval(x);
-        var end-days = document.getElementById("days").innerHTML;
-        var end-hours = document.getElementById("hours").innerHTML;
-        var end-minutes = document.getElementById("minutes").innerHTML;
-        var end-seconds = document.getElementById("seconds").innerHTML;
-        end-days.style.visibility = "hidden";
-        end-hours.style.visibility = "hidden";
-        end-minutes.style.visibility = "hidden";
-        end-seconds.style.visibility = "hidden";
-        document.getElementById("end").innerHTML = "THE TIFFIES - LIVE @ TWITCH.TV/TIFFANYLOCKHEART";
-        var label = document.getElementById("label-container").innerHTML;
-        label.style.width = "0px";
-        label.style.height = "0px";
-      }
-    }, 1000);
-  </script>
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var daysraw = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hoursraw = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesraw = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsraw = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Format the time values
+  var days = daysraw < 10 ? ("0" + daysraw).slice(-2) : daysraw;
+  var hours = hoursraw < 10 ? ("0" + hoursraw).slice(-2) : hoursraw;
+  var minutes = minutesraw < 10 ? ("0" + minutesraw).slice(-2) : minutesraw;
+  var seconds = secondsraw < 10 ? ("0" + secondsraw).slice(-2) : secondsraw;
+  
+  // Output the result in the respective elements
+  document.getElementById("days").innerHTML =(days+":");
+  document.getElementById("hours").innerHTML =(hours+":");
+  document.getElementById("minutes").innerHTML =(minutes+":");
+  document.getElementById("seconds").innerHTML = seconds;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "";
+    document.getElementById("hours").innerHTML = "";
+    document.getElementById("minutes").innerHTML = "";
+    document.getElementById("seconds").innerHTML = "";
+    document.getElementById("end").innerHTML = "THE TIFFIES - LIVE @ TWITCH.TV/TIFFANYLOCKHEART";
+    document.getElementById("countdown-label").innerHTML = "";
+  }
+}, 1000);
+</script>
   </head>
   <body id="iau9"><div id="i6po" class="gjs-grid-row"><div id="itjq" class="gjs-grid-column"><div id="iyd2" class="gjs-grid-row"><div id="iqjl" class="gjs-grid-column"><div id="io1u07" class="gjs-image-box"></div></div><div id="iffs" class="gjs-grid-column"><div id="it00l" class="gjs-grid-row"><div id="irtfd" class="gjs-grid-column"><a id="i88iz" href="#feature-section" class="gjs-link">Tiffies 5.0
                 Countdown<br/></a><a id="icfyb" href="#ilwqrn" title="" class="gjs-link">Show Archives<br/></a><a href="#iklro9" id="infmy1" class="gjs-link">Personal GOTYs<br/></a></div></div></div></div></div></div><div id="irz7b" class="gjs-grid-row"><div id="iycz3" class="gjs-grid-column"><h1 id="irjua" class="gjs-heading">All About The Tiffies<br/></h1><div id="itndw" class="text-main-content">The Tiffies is a yearly community-based award show hosted by Tiffany
@@ -70,13 +62,13 @@
         that larger shows overlook, Tiffany has put on the Tiffies year after year in order to celebrate
         <i><b>you</b></i>, the viewers, as well as the games and community members that impacted you the most over the
         course of the year!<br/></div><div id="i0mtco" class="gjs-grid-row"><div class="gjs-grid-column"><div id="iq2a3q" class="gjs-image-box"></div></div></div></div></div><div id="feature-section" class="gjs-grid-row"><div id="imymf" class="gjs-grid-column"><div id="ib541" class="gjs-grid-row"><div id="ij8w79" class="gjs-grid-column"><h2 id="izahnf" class="gjs-heading">Countdown to The Tiffies 5.0<br/></h2><div id="countdown-container" class="gjs-grid-row"><div id="count-and-label-container" class="gjs-grid-column"><div id="end" class="countdown-digit"></div><div id="countdown" class="gjs-grid-row"><div id="days-container" class="gjs-grid-column"><div id="days" class="countdown-digit">00:</div></div><div id="hours-container" class="gjs-grid-column"><div id="hours" class="countdown-digit">00:</div></div><div id="minutes-container" class="gjs-grid-column"><div id="minutes" class="countdown-digit">00:</div></div><div id="seconds-container" class="gjs-grid-column"><div id="seconds" class="countdown-digit">00</div></div></div><div id="countdown-label" class="gjs-grid-row"><div id="days-label-container" class="gjs-grid-column"><div id="days-label" class="countdown-cont">
-                      Days
+                    Days
                     </div></div><div id="hours-label-container" class="gjs-grid-column"><div id="hours-label" class="countdown-cont">
-                      Hours
+                    Hours
                     </div></div><div id="minutes-label-container" class="gjs-grid-column"><div id="minutes-label" class="countdown-cont">
-                      Minutes
+                    Minutes
                     </div></div><div id="seconds-label-container" class="gjs-grid-column"><div id="seconds-label" class="countdown-cont">
-                      Seconds
+                    Seconds
                     </div></div></div></div></div><div id="i4k8kz" class="text-main-content">Excited for the show? Then take a peek at some different award
             categories for this year's show!<br/></div><a id="ip3txf" href="./tiffies-5.0-countdown.html" class="gjs-button">Read More<br/></a></div></div></div></div><div id="ilwqrn" class="gjs-grid-row"><div id="in6072" class="gjs-grid-column"><div id="iy5y4u" class="gjs-grid-row"><div id="iorg7p" class="gjs-grid-column"><h2 id="ipbj3f" class="gjs-heading">Show Archive<br/></h2><div id="i968j9" class="countdown"><span data-js="countdown-endtext" class="countdown-endtext"></span></div><div id="i0q4cm" class="text-main-content">New to the community? Feeling nostalgic? Want to see awards and
             edits from previous years' shows? Check out The Tiffies archive to see content from prior shows!<br/></div><a id="ivq4c1" href="./show-archives.html" class="gjs-button">Read More<br/></a></div></div></div></div><div id="iklro9" class="gjs-grid-row"><div id="i558ti" class="gjs-grid-column"><div id="iftsnj" class="gjs-grid-row"><div id="ildwf6" class="gjs-grid-column"><h2 id="izd11z" class="gjs-heading">Personal GOTYs<br/></h2><div id="ic3vbw" class="countdown"><span data-js="countdown-endtext" class="countdown-endtext"></span></div><div id="icyhzo" class="text-main-content">Want to see what games have been most impactful to Tiffany and her

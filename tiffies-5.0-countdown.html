@@ -13,55 +13,47 @@
   <link rel="icon" href="assets/tiffies_site_icon.png"/>
   <link rel="stylesheet" href="./style.css">
   <script>
-    // get countdown container and text to hide it when the countdown ends
-    var countdown = document.getElementById("countdown").innerHTML;
     // Set the date we're counting down to
-    var countDownDate = new Date(Date.UTC(2024, 11, 30, 00, 00, 00, 00)).getTime();
+var countDownDate = new Date(Date.UTC(2024, 11, 30, 00, 00, 00, 00)).getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-      // Get today's date and time
-      var now = new Date().getTime();
-        
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-        
-      // Time calculations for days, hours, minutes and seconds
-      var daysraw = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hoursraw = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutesraw = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var secondsraw = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      // Format the time values
-      var days = daysraw < 10 ? ("0" + daysraw).slice(-2) : daysraw;
-      var hours = hoursraw < 10 ? ("0" + hoursraw).slice(-2) : hoursraw;
-      var minutes = minutesraw < 10 ? ("0" + minutesraw).slice(-2) : minutesraw;
-      var seconds = secondsraw < 10 ? ("0" + secondsraw).slice(-2) : secondsraw;
-      
-      // Output the result in the respective elements
-      document.getElementById("days").innerHTML =(days+":");
-      document.getElementById("hours").innerHTML =(hours+":");
-      document.getElementById("minutes").innerHTML =(minutes+":");
-      document.getElementById("seconds").innerHTML = seconds;
-        
-      // If the count down is over, write some text 
-      if (distance < 0) {
-        clearInterval(x);
-        var end-days = document.getElementById("days").innerHTML;
-        var end-hours = document.getElementById("hours").innerHTML;
-        var end-minutes = document.getElementById("minutes").innerHTML;
-        var end-seconds = document.getElementById("seconds").innerHTML;
-        end-days.style.visibility = "hidden";
-        end-hours.style.visibility = "hidden";
-        end-minutes.style.visibility = "hidden";
-        end-seconds.style.visibility = "hidden";
-        document.getElementById("end").innerHTML = "THE TIFFIES - LIVE @ TWITCH.TV/TIFFANYLOCKHEART";
-        var label = document.getElementById("label-container").innerHTML;
-        label.style.width = "0px";
-        label.style.height = "0px";
-      }
-    }, 1000);
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var daysraw = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hoursraw = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesraw = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsraw = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Format the time values
+  var days = daysraw < 10 ? ("0" + daysraw).slice(-2) : daysraw;
+  var hours = hoursraw < 10 ? ("0" + hoursraw).slice(-2) : hoursraw;
+  var minutes = minutesraw < 10 ? ("0" + minutesraw).slice(-2) : minutesraw;
+  var seconds = secondsraw < 10 ? ("0" + secondsraw).slice(-2) : secondsraw;
+  
+  // Output the result in the respective elements
+  document.getElementById("days-2").innerHTML =(days+":");
+  document.getElementById("hours-2").innerHTML =(hours+":");
+  document.getElementById("minutes-2").innerHTML =(minutes+":");
+  document.getElementById("seconds-2").innerHTML = seconds;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days-2").innerHTML = "";
+    document.getElementById("hours-2").innerHTML = "";
+    document.getElementById("minutes-2").innerHTML = "";
+    document.getElementById("seconds-2").innerHTML = "";
+    document.getElementById("end-2").innerHTML = "THE TIFFIES - LIVE @ TWITCH.TV/TIFFANYLOCKHEART";
+    document.getElementById("countdown-label-2").innerHTML = "";
+  }
+}, 1000);
   </script>
   </head>
   <body id="il6d88"><div id="i5la5j" class="gjs-grid-row"><div id="ixc3h4" class="gjs-grid-column"><div id="i222c7" class="gjs-grid-row"><div id="iva34d" class="gjs-grid-column"><div id="imsd5g" class="gjs-image-box"><a href="./index.html" id="ifagf4" class="gjs-link-box"></a></div></div><div id="i1cg5h" class="gjs-grid-column"><div id="igu655" class="gjs-grid-row"><div id="ir8hrr" class="gjs-grid-column"><a href="./show-archives.html" title="" id="i6n0vp" class="gjs-link">Show Archives<br/></a><a href="./personal-gotys.html" id="i09up2" class="gjs-link">Personal GOTYs<br/></a></div></div></div></div></div></div><div id="i3253k" class="gjs-grid-row"><div id="iyzsc4" class="gjs-grid-column"><h1 id="immyvt" class="gjs-heading">Countdown to The Tiffies 5.0 (2024)<br/></h1><div id="countdown-container-2" class="gjs-grid-row"><div id="count-and-label-container-2" class="gjs-grid-column"><div id="end-2" class="countdown-digit"></div><div id="countdown-2" class="gjs-grid-row"><div id="days-container-2" class="gjs-grid-column"><div id="days-2" class="countdown-digit">00:</div></div><div id="hours-container-2" class="gjs-grid-column"><div id="hours-2" class="countdown-digit">00:</div></div><div id="minutes-container-2" class="gjs-grid-column"><div id="minutes-2" class="countdown-digit">00:</div></div><div id="seconds-container-2" class="gjs-grid-column"><div id="seconds-2" class="countdown-digit">00</div></div></div><div id="countdown-label-2" class="gjs-grid-row"><div id="days-label-container-2" class="gjs-grid-column"><div id="days-label-2" class="countdown-cont">
